@@ -1,4 +1,4 @@
-using DentistAppSys.API.Services;
+using DentistAppSys.Domain.Services;
 using Microsoft.Extensions.Azure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +15,7 @@ builder.Services.AddAzureClients(
     );
 
 builder.Services.AddSingleton<INotificationService, NotificationService>();
+builder.Services.AddSingleton<IMailService, MailService>();
 
 var app = builder.Build();
 
