@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DentistAppSys.API.Models
+namespace DentistAppSys.Domain.Models
 {
     public class Appointment
     {
@@ -15,6 +15,6 @@ namespace DentistAppSys.API.Models
         [Required]
         public int CareTakerId { get; set; }
         [Required]
-        public DateTime ScheduleAt { get; set; }
+        public DateTime ScheduledAt { get; set; }
     }
 }
